@@ -1,216 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ujwal Mishra | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    :root {
-      --primary: #2563eb;
-      --bg: #f9fafb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 60px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin: 0;
-    }
-
-    .hero span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      color: var(--muted);
-    }
-
-    .links a {
-      display: inline-block;
-      margin-right: 15px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* SECTION */
-    section {
-      margin-bottom: 60px;
-    }
-
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .card p {
-      color: var(--muted);
-    }
-
-    .tech {
-      margin-top: 10px;
-      font-size: 14px;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* SKILLS */
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: white;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ujwal Mishra | Portfolio</title>
+<meta name="description" content="Portfolio of Ujwal Mishra, Information Technology student at ABV-IIITM Gwalior, featuring software development projects and technical background.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5f7;--surface:#fff;--ink:#14181f;--muted:#5a6270;--line:#d9dce2;--accent:#1f4fd8;--sq:#e6e8ec}
+@media (prefers-color-scheme:dark){:root{--bg:#0f131b;--surface:#161b25;--ink:#e8eaee;--muted:#9aa3b2;--line:#272e3b;--accent:#7aa2ff;--sq:#1a2030}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
+.hero{padding:64px 0 36px}
+.board{display:grid;grid-template-columns:repeat(16,1fr);height:22px;margin-bottom:34px;border:1px solid var(--line)}
+.board i{background:var(--sq)}
+.board i:nth-child(even){background:transparent}
+h1{font:600 clamp(40px,7vw,66px)/1.05 "Newsreader",Georgia,serif;margin:0 0 14px;letter-spacing:-.01em}
+.role{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 24px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{padding:9px 16px;border:1px solid var(--ink);border-radius:4px;color:var(--ink);text-decoration:none;font-weight:500}
+.links a.primary{background:var(--ink);color:var(--bg)}
+.links a:hover{border-color:var(--accent)}
+section{padding:48px 0 4px}
+h2{font:600 30px/1.2 "Newsreader",Georgia,serif;margin:0 0 20px}
+.lead{max-width:660px;margin:0}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:26px;margin-bottom:22px}
+.project h3{font:600 26px/1.2 "Newsreader",Georgia,serif;margin:0 0 4px}
+.tag{color:var(--muted);margin:0 0 14px;font-size:15px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 16px;font:500 13px/1 "IBM Plex Mono",monospace}
+.flow span{padding:7px 10px;background:var(--sq);border:1px solid var(--line);border-radius:3px}
+.flow b{color:var(--muted);font-weight:400}
+.project ul{margin:0 0 16px;padding-left:18px}
+.project li{margin-bottom:8px;font-size:15px}
+.stack{color:var(--accent);font-size:14px;font-weight:500;margin:0 0 12px}
+.go{font-weight:500;font-size:15px}
+.skills{border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.skills div{padding:14px 20px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:12px}
+.skills div:last-child{border:0}
+.skills b{font-size:14px}
+.skills span{color:var(--muted);font-size:15px}
+@media (max-width:600px){.skills div{grid-template-columns:1fr;gap:0}}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{padding:11px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}
+footer{padding:44px 0 40px;color:var(--muted);font-size:14px}
+</style>
 </head>
-
 <body>
-  <div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-      <h1>Hi, I’m <span>Ujwal Mishra</span> 👋</h1>
-      <p>
-        I’m an Information Technology student at ABV-IIITM Gwalior who enjoys
-        building full-stack web applications using the MERN stack and solving
-        real-world problems with clean, scalable code.
-      </p>
-      <div class="links">
-        <a href="https://github.com/Ujwalmishra1210" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/ujwal-mishra-266974251/" target="_blank">LinkedIn</a>
-        <a href="mailto:mishraujwal105@gmail.com">Email</a>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <section>
-      <h2>Projects</h2>
-      <div class="projects">
-
-        <div class="card">
-          <h3>YogaPulse</h3>
-          <p>
-            A role-based yoga management platform connecting students and
-            instructors with separate dashboards and secure authentication.
-          </p>
-          <ul>
-            <li>JWT-based authentication</li>
-            <li>Student, teacher & admin roles</li>
-            <li>MongoDB-driven data handling</li>
-          </ul>
-          <div class="tech">MERN Stack</div>
-        </div>
-
-        <div class="card">
-          <h3>BlogWeb</h3>
-          <p>
-            A full-stack blogging platform with role-based access control and
-            secure content management.
-          </p>
-          <ul>
-            <li>Admin-controlled blog posts</li>
-            <li>User comments with auth</li>
-            <li>Secure backend APIs</li>
-          </ul>
-          <div class="tech">MERN Stack</div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="skill">C++</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">Express</div>
-        <div class="skill">MongoDB</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Git & GitHub</div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      📍 Gwalior, Madhya Pradesh •
-    </footer>
-
+<header class="hero"><div class="wrap">
+  <div class="board" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <h1>Ujwal Mishra</h1>
+  <p class="role">Information Technology student and software developer at ABV-IIITM Gwalior, with project experience in full-stack and distributed application development.</p>
+  <div class="links">
+    <a class="primary" href="mailto:mishraujwal105@gmail.com">Email me</a>
+    <a href="https://github.com/Ujwalmishra1210" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/ujwal-mishra-266974251/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://leetcode.com/u/UjwalMishra/" target="_blank" rel="noopener">LeetCode</a>
   </div>
+</div></header>
+
+<main class="wrap">
+
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">I am a fifth-year student pursuing an Integrated B.Tech. and M.Tech. in Information Technology at ABV-IIITM Gwalior, with a current CGPA of 8.61. My coursework and self-directed work cover data structures and algorithms, operating systems, database management systems, computer networks and object-oriented programming.</p>
+  <p class="lead">I enjoy building software that is reliable in practice. My projects span real-time communication, background job processing and concurrent request handling, where the focus is on correctness, fault tolerance and clear system design. I use Git, Docker and monitoring tools as part of my regular workflow.</p>
+  <p class="lead">From June to August 2026, I worked as a Research Intern in the Department of Information Technology at ABV-IIITM Gwalior. The work involved implementing and evaluating adversarial attack methods on CLIP-based vision-language models using PyTorch and HuggingFace Transformers. It strengthened my approach to experimentation, evaluation and documentation.</p>
+  <p class="lead">Beyond academics, I have solved over 600 problems on LeetCode, reached the national semi-final stage of Flipkart GRiD 2026 in the Software Development Track, and play chess competitively.</p>
+  <ul class="facts" style="margin-top:22px">
+    <li><b>Integrated B.Tech. + M.Tech., Information Technology</b><br>ABV-IIITM Gwalior, 2022 to 2027 · CGPA 8.61</li>
+    <li><b>Class XII (CBSE)</b><br>St. John Sr. Sec. School, Kota, 2021 · 85.2%</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="project">
+    <h3>Flux</h3>
+    <p class="tag">Distributed notification system</p>
+    <div class="flow" aria-label="Architecture"><span>API</span><b>→</b><span>BullMQ</span><b>→</b><span>Workers</span><b>→</b><span>Providers</span><b>↘</b><span>DLQ + replay</span></div>
+    <ul>
+      <li>Fault-tolerant delivery against provider failures: backoff retries, a Dead Letter Queue and a replay endpoint for failed notifications.</li>
+      <li>Idempotent workers using Redis locks, atomic status claims and a per-channel circuit breaker.</li>
+      <li>Prometheus and Grafana monitor throughput and queue health; API and workers run as separate Docker Compose services.</li>
+    </ul>
+    <p class="stack">Node.js, Express, PostgreSQL, Redis, BullMQ, Docker</p>
+    <a class="go" href="https://github.com/Ujwalmishra1210/flux" target="_blank" rel="noopener">View source on GitHub</a>
+  </article>
+
+  <article class="project">
+    <h3>Ride Matching Engine</h3>
+    <p class="tag">Real-time ride dispatch</p>
+    <div class="flow" aria-label="Architecture"><span>Rider request</span><b>→</b><span>Redis GEO</span><b>→</b><span>Atomic reserve</span><b>→</b><span>WebSocket offer</span><b>→</b><span>Accept / fallback</span></div>
+    <ul>
+      <li>Finds nearby drivers with Redis GEO queries and reserves them atomically, falling back to the next driver on reject or timeout.</li>
+      <li>Prevents double-booking with Redis optimistic locking (WATCH/MULTI/EXEC) and duplicate dispatch with a token-guarded per-ride lock (SET NX + TTL). Verified with custom concurrency tests.</li>
+      <li>WebSocket offer/accept flow with timeouts and a live React dashboard fed by an event bus.</li>
+    </ul>
+    <p class="stack">Node.js, Redis, WebSockets, React</p>
+    <a class="go" href="https://github.com/Ujwalmishra1210/ride-matching-engine" target="_blank" rel="noopener">View source on GitHub</a>
+  </article>
+
+  <article class="project">
+    <h3>ChatFlow</h3>
+    <p class="tag">Full-stack real-time chat</p>
+    <div class="flow" aria-label="Architecture"><span>React client</span><b>⇄</b><span>Socket.IO</span><b>⇄</b><span>Express</span><b>→</b><span>MongoDB</span></div>
+    <ul>
+      <li>Event-driven messaging over Socket.IO for instant delivery between clients.</li>
+      <li>Online/offline presence, live typing indicators, read receipts and message deletion that syncs across all connected clients.</li>
+      <li>JWT authentication, Mongoose persistence and a responsive UI built with React Hooks and Styled-Components.</li>
+    </ul>
+    <p class="stack">React, Node.js, Express, MongoDB, Socket.IO</p>
+    <a class="go" href="https://github.com/Ujwalmishra1210/ChatFlow" target="_blank" rel="noopener">View source on GitHub</a>
+  </article>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>Languages</b><span>C++, JavaScript, SQL</span></div>
+    <div><b>Frontend</b><span>React, HTML, CSS</span></div>
+    <div><b>Backend</b><span>Node.js, Express.js, REST APIs, BullMQ</span></div>
+    <div><b>Databases</b><span>PostgreSQL, MongoDB, MySQL, Redis</span></div>
+    <div><b>Tools</b><span>Git, Docker, Docker Compose, Postman, Prometheus, Grafana</span></div>
+    <div><b>Core CS</b><span>DSA, Operating Systems, DBMS, Computer Networks, OOPs</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Highlights</h2>
+  <ul class="facts">
+    <li>National semi-finalist, Flipkart GRiD 2026 (Software Development Track)</li>
+    <li>600+ problems solved on LeetCode</li>
+    <li>Research Intern, Department of Information Technology, ABV-IIITM Gwalior (June to August 2026)</li>
+    <li>Chess: rapid rating above 2000 on Chess.com</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">Open to internship and full-time opportunities in software development.<br><a href="mailto:mishraujwal105@gmail.com">mishraujwal105@gmail.com</a> · Gwalior, Madhya Pradesh</p>
+</section>
+
+</main>
+<footer><div class="wrap">© 2026 Ujwal Mishra</div></footer>
 </body>
 </html>
